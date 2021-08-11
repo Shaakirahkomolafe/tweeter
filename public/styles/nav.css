@@ -1,25 +1,39 @@
 nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  height: 120px;
   color: #FFFF;
   width: 100%;
   background-color: #4056A1;
   font-size: 24px;
-  height: 120px;
-  z-index: 100;
+}
+.row{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-content: center;
+  padding-top: 50px;
+  margin-left: 1.5em;
+  margin-right: 1.5em;
+}
 
-  
+.app-name{
+  margin-right: 50px;
 }
-span{
+
+.column{
+  display: flex;
+  flex-flow: column wrap;  
+}
+.column :last-child{
+  align-self: center;
+}
+.app-name{
   font-family: Bungee, sans-serif;
-  padding-top: 1.0em;
-  margin-left: 1.5em;
-  margin-right: 1.5em;
 }
-p {
-  align-items: flex-end;
-  font-family: sans-serif;
-  margin-left: 1.5em;
-  margin-right: 1.5em;
+
+.fa-angle-double-down{
+color: red;
 }

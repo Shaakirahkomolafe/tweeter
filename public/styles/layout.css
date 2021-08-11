@@ -21,14 +21,57 @@ body {
   font-family: Source Sans Pro , sans-serif;
 }
 
+.footer-hover{
+  display: flex;
+  flex-direction: row;
+  border-top: black solid 5px;
+  padding-top: 12px;
+  margin-left: 10px;
+  margin-top: 30px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+} 
+.icons{
+  margin-left: auto;
+}
+.fa-flag:hover{
+  color: goldenrod;
+}
+.fa-retweet:hover{
+  color: goldenrod;
+}
+.fa-heart:hover{
+  color: goldenrod;
+}
+
+.tweets{
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  margin-left: 10px;
+  margin-right: 50px;
+  border-top: 20px;
+  border-bottom: 10px;
+  border: 2px solid black;
+
+}
+
+.tweets:hover{
+   box-shadow: 4px 4px 4px rgba(0,0,0,0.4);
+}
+
+.header-text{
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 10px;
+  padding-left: 10px;
+  
+
+}
+
+.tweets header{
+  background-color: #f4f1ec;
+  background-image: none;
+}
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
- */
- main{
-   display: flex;
-   width: 90%;
-   justify-content: center;
-   align-items: center;
-   background-color: #f4f1ec;
-
- }
