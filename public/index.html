@@ -24,7 +24,8 @@
     
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <!-- <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script> -->
+    <!-- for timeago -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!--For font awesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -64,30 +65,17 @@
     <main class="container">
       <section class="new-tweet">
       <h2>Compose Tweet</h2>
-      <form method='POST' action="/tweets">
+      <form id ="compose-tweet" method='POST' action="/tweets">
         <label for="tweet-text">What are you humming about?</label>
         <textarea name="text" id="tweet-text"></textarea>
         <div class = 'view'>
-          <button type="submit">Tweet</button>
+          <button id ="submit-tweet" type="submit">Tweet</button>
           <output name="counter" class="counter" for="tweet-text">140</output>
         </div>
       </form>
     </section> 
-    <section class ='tweets'>
-      <article>
-        <header class="header-text">
-      If i have seen further it is by standing on the shoulders of giants.
-        </header>
-      <footer class="footer-hover">
-        10 days ago
-        <div class="icons"> 
-         <i class="fas fa-flag"></i>
-        <i class="fas fa-retweet"></i>
-        <i class="fas fa-heart"></i>
-      </div>
-
-      </footer>
-      </article>
+ 
+    <section class ='tweets' id="tweets-container">
     </section>
   
   </main>

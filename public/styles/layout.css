@@ -44,7 +44,7 @@ body {
   color: goldenrod;
 }
 
-.tweets{
+#tweets-container{
   display: flex;
   flex-direction: column;
   margin-top: 50px;
@@ -56,20 +56,22 @@ body {
 
 }
 
-.tweets:hover{
+#tweets-container:hover{
    box-shadow: 4px 4px 4px rgba(0,0,0,0.4);
 }
 
 .header-text{
   display: flex;
-  justify-content: flex-start;
+  flex-flow: row nowrap;
+  justify-content: space-between;
   padding-top: 10px;
-  padding-left: 10px;
+  margin-left: 1.5em;
+  margin-right: 1.5em;
   
 
 }
 
-.tweets header{
+#tweets-container header{
   background-color: #f4f1ec;
   background-image: none;
 }

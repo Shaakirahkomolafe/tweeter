@@ -1,5 +1,5 @@
 nav {
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   z-index: 9999;
@@ -27,13 +27,13 @@ nav {
   display: flex;
   flex-flow: column wrap;  
 }
-.column :last-child{
-  align-self: center;
-}
+
 .app-name{
   font-family: Bungee, sans-serif;
 }
 
-.fa-angle-double-down{
-color: red;
+.fa-angle-double-down {
+  align-self: center;
+  text-align: center;
+  color: red;
 }
