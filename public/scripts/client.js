@@ -101,6 +101,7 @@ $(document).ready(function() {
       })
         .then(() => {
           $("#tweet-text").val("");
+          $('.counter').val(140);
           loadTweets();
           console.log('tweets loaded');
         })
