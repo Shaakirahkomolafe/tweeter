@@ -1,4 +1,4 @@
-.avatar{
+.avatar-column{
   padding-top: 130px;
   display: flex;
   width: 100%;
@@ -10,3 +10,18 @@
   background-color: #878c00;
 background-image: url("https://www.transparenttextures.com/patterns/beige-paper.png"); 
 }
+
+ /* Desktop styles */
+@media only screen and (min-width: 1024px) {
+
+  .avatar-column{
+
+   margin: 3%;
+   padding: 5%;
+   width:30vw;
+   height: 50vh;
+
+   background-color:goldenrod;    
+  }
+
+  }

@@ -11,21 +11,16 @@ nav {
 }
 .row{
   display: flex;
-  flex-flow: row nowrap;
+  flex-direction: column;
   justify-content: space-between;
-  align-content: center;
   padding-top: 50px;
   margin-left: 1.5em;
   margin-right: 1.5em;
+  flex-flow: wrap;
 }
 
 .app-name{
   margin-right: 50px;
-}
-
-.column{
-  display: flex;
-  flex-flow: column wrap;  
 }
 
 .app-name{
@@ -33,7 +28,40 @@ nav {
 }
 
 .fa-angle-double-down {
-  align-self: center;
-  text-align: center;
+  animation: bounce 1s infinite;
+  display: flex;
+ margin-left: 80px;
   color: red;
 }
+@keyframes bounce{
+  50% {transform: translateY(10px) }
+  100% {transform: translateY((-5px))}
+
+};
+
+/* mobile styles */
+@media only screen and (max-width: 420px) {
+  /* Write smartphone only styles here */
+ .tweet-body{
+   font-size: 0.75em;
+ }
+ .header-text>b{
+  font-size: 0.65em; 
+ }
+.tweet-avatar{
+  width: 10vw;
+}
+
+}
+nav {background-color: #878c00;
+background-image: url("https://www.transparenttextures.com/patterns/beige-paper.png"); 
+}
+  
+ /* Desktop styles */
+@media only screen and (min-width: 1024px) {
+  nav{
+    background-image: none;
+    background-color: #4056A1;
+  }
+
+  }

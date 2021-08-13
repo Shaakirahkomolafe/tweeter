@@ -5,14 +5,19 @@ $(document).ready(function() {
   // --- our code goes here ---
   $('#tweet-text').on('input', function(e) {
     let counter = $(this).val().length;
-    // console.log($(this));
     const inputLength = 140 - counter;
-    $('.counter').text(inputLength);
+    console.log(inputLength);
+    $(this).parents().find('.counter').text(inputLength);
     if (inputLength < 0) {
       console.log('hello world');
       $('.counter').css({'color' : 'red'});
+      return;
     }
-    console.log(counter);
+    $('.counter').css({'color': 'black'});
 
+  });
+  // on click function to hide our error message//
+  $('#tweet-text').on('click', function(e) {
+    $(".error").hide();
   });
 });

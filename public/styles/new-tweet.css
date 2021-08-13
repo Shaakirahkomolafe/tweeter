@@ -1,11 +1,10 @@
  main{
-
    display: flex;
    flex-direction: column;
    width: 100%;
    justify-content: center;
    background-color: #f4f1ec;
-  padding: 80px;
+  padding: 5%;
  }
  
 label{
@@ -35,3 +34,58 @@ margin-left: auto;
   border-bottom: solid 5px black;
   width: 100%;
 }
+
+.error{
+	display: none;
+	margin-left: 10px;
+  color: red;
+}	
+
+.error_show{
+  display: block;
+}
+
+.tweet-body{
+  font-size: 1em;
+}
+/* mobile styles */
+@media only screen and (max-width: 420px) {
+  /* Write smartphone only styles here */
+ .tweet-body{
+   font-size: 0.75em;
+ }
+ .header-text>b{
+  font-size: 0.65em; 
+ }
+.tweet-avatar{
+  width: 10vw;
+}
+
+}
+
+/* Tab styles */
+@media only screen and (min-width: 768px) {
+  main{
+    background-color: #f4f1ec; 
+  }
+}
+
+ /* Desktop styles */
+@media only screen and (min-width: 1024px) {
+  main{
+    background-color: #f4f1ec;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1px;
+  }
+  
+  .toggle-header{
+    display: flex;
+    flex-direction: row;
+    margin-left: 1.5em;
+    padding: 3%;
+  }
+
+  }
+
