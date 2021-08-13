@@ -4,11 +4,13 @@
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
 
+<!--to prevent zooming in on mobile and helps with responsiveness-->
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 
-
-    <!-- External CSS -->
+   <!-- External CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
+
+    <!--for google fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap" rel="stylesheet">
@@ -27,7 +29,8 @@
     
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <!-- for timeago -->
+
+    <!-- script for timeago -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!--For font awesome-->
@@ -35,18 +38,21 @@
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
+
+    <!--script for the tweet counter-->
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
     
   </head>
 
   <body>
     <!-- Top nav bar (fixed) -->
-    <nav>
-      
+    <nav> 
+      <!--div to wrap the navbar in a row -->
       <div class="row">
         <div>
         <span class="app-name">tweeter</span>
         </div>
+         <!--div to wrap the write atweet and icon in a column -->
         <div class="colunm">
           <div>
             <b>Write</b> 
@@ -58,7 +64,9 @@
       </div>
       </div>  
     </nav>
+    <!--div to wrap the header and the tweets so as to style it responsively-->
     <div class="toggle-header">
+      <!--the page header div that includes the avatar image and name-->
     <header class="avatar">
       <div class="avatar-column">
       <div class="avatar-image">
@@ -71,7 +79,10 @@
   </header>
  
     <!-- Page-specific (main) content here -->
+    <!--container that contains the form for inputing the tweets , the submit button, counter and the rendered tweets-->
     <main class="container">
+
+      <!--section that contains the input text field and the submit button, also displays the limit character-->
       <section class="new-tweet">
         <div class="error"></div>
       <form id ="compose-tweet" method='POST' action="/tweets">
@@ -83,6 +94,7 @@
         </div>
       </form>
     </section> 
+    <!--section that renders the tweets-->
     <section class ='tweets' id="tweets-container"> 
     </section>
   </main>
