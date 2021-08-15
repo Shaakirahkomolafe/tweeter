@@ -33,6 +33,7 @@ nav {
  margin-left: 80px;
   color: red;
 }
+
 @keyframes bounce{
   50% {transform: translateY(10px) }
   100% {transform: translateY((-5px))}
@@ -51,7 +52,6 @@ nav {
 .tweet-avatar{
   width: 10vw;
 }
-
 }
 nav {background-color: #878c00;
 background-image: url("https://www.transparenttextures.com/patterns/beige-paper.png"); 
@@ -63,5 +63,4 @@ background-image: url("https://www.transparenttextures.com/patterns/beige-paper.
     background-image: none;
     background-color: #4056A1;
   }
-
-  }
+ }

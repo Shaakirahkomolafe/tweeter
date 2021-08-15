@@ -7,7 +7,7 @@
  */
 $(document).ready(function() {
  
-  //tweetData object database//
+  //tweetData object database
   let tweetData =  {
     "user": {
       "name": "Newton",
@@ -20,7 +20,7 @@ $(document).ready(function() {
     "created_at": 1461116232227
   };
 
-  //function to create new tweets, it contains hardcoded tweets from our database//
+  //function to create new tweets, it contains hardcoded tweets from our database
   const createTweetElement = function(tweetData) {
     const $tweet = $(` 
     <article>
@@ -45,9 +45,8 @@ $(document).ready(function() {
 
   const $tweet = createTweetElement(tweetData);
 
-  //function to rendertweets//
+  //function to rendertweets
   const renderTweets = function(tweets) {
-    console.log(tweets);
     $('#tweets-container').empty();
     // loops through tweets
     for (let i = 0; i < tweets.length; i++) {
@@ -59,7 +58,7 @@ $(document).ready(function() {
     }
   };
   
-  //function to load our tweets, it uses the ajax get method to get our tweets//
+  //function to load our tweets, it uses the ajax get method to get our tweets
   const loadTweets = function() {
     $.ajax({
       method: "GET",
@@ -77,9 +76,9 @@ $(document).ready(function() {
   // the submit event function to check our submit button , to display errors also when
   $("#compose-tweet").on("submit", function(event) {
     event.preventDefault();
-    // when the input area is empty,it displays an error//
+    // when the input area is empty,it displays an error
     if ($('#tweet-text').val() === '') {
-      //jquery for displaying error message//
+      //jquery for displaying error message
       $('.error').text('Please type a tweet');
       //this is to display and hide our error using jquery , html and css for styling//
       if ($('.error').first().is(":hidden")) {
@@ -87,29 +86,28 @@ $(document).ready(function() {
       } else {
         $(".error").hide();
       }
-      //also when the tweet limit is exceeded, it displays our error block//
+      //also when the tweet limit is exceeded, it displays our error block
     } else if ($('#tweet-text').val().length > 140) {
-      //jquery for displaying error message//
+      //jquery for displaying error message
       $('.error').text('Text Limit exceeded');
-      //this is to display and hide our error using jquery , html and css for styling//
+      //this is to display and hide our error using jquery , html and css for styling
       if ($('.error').first().is(":hidden")) {
         $(".error").slideDown("slow");
       } else {
         $(".error").hide();
       }
     } else {
-      //if all these above didnt happen, then ajax post to post the tweet and load immediately without refreshing//
+      //if all these above didnt happen, then ajax post to post the tweet and load immediately without refreshing
       $.ajax({
         method: "POST",
         url: '/tweets',
         data:$(this).serialize(),
       })
         .then(() => {
-          //this is to empty our iput area after submitting and revert the counter back to 140//
+          //this is to empty our iput area after submitting and revert the counter back to 140
           $("#tweet-text").val("");
           $('.counter').val(140);
           loadTweets();
-          console.log('tweets loaded');
         })
         .catch(function(error) {
           console.log(error);
@@ -118,7 +116,7 @@ $(document).ready(function() {
   });
 });
 
-//function to make sure no maliciouss scripts/ code are run instead of strings//
+//function to make sure no maliciouss scripts/ code are run instead of strings
 const escape = function(str) {
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));

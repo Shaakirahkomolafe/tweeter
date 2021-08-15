@@ -13,15 +13,11 @@
 
  /* Desktop styles */
 @media only screen and (min-width: 1024px) {
-
   .avatar-column{
-
    margin: 3%;
    padding: 5%;
    width:30vw;
    height: 50vh;
-
    background-color:goldenrod;    
   }
-
   }

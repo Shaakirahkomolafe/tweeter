@@ -20,8 +20,7 @@ label{
 .view{
   display: flex;
   font-family: Bungee, sans-serif;
-  margin-top: 10px;
-  
+  margin-top: 10px;  
 }
 
 .counter{
@@ -44,6 +43,7 @@ margin-left: auto;
 .tweet-body{
   font-size: 1em;
 }
+
 /* mobile styles */
 @media only screen and (max-width: 420px) {
   /* Write smartphone only styles here */
@@ -56,7 +56,6 @@ margin-left: auto;
 .tweet-avatar{
   width: 10vw;
 }
-
 }
 
 /* Tab styles */
@@ -82,6 +81,5 @@ margin-left: auto;
     margin-left: 1.5em;
     padding: 3%;
   }
-
   }
 
