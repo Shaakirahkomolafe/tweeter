@@ -6,7 +6,7 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 $(document).ready(function() {
-  
+ 
   //tweetData object database//
   let tweetData =  {
     "user": {
@@ -71,6 +71,8 @@ $(document).ready(function() {
       });
     alert("Tweet Sent!");
   };
+
+  loadTweets();
  
   // the submit event function to check our submit button , to display errors also when
   $("#compose-tweet").on("submit", function(event) {
